@@ -1,46 +1,23 @@
 class Vampire
-  def initialize(name)
+
+  attr_reader :name, :pet
+
+  def initialize(name, pet = "bat")
     @name = name
+    @pet = pet
+    @counter = 0
   end
 
-  def name
-    @name
-  end
-
-  def name
-    if name == "Dracula"
+  def thirsty?
+    if @counter < 1
       true
     else
       false
     end
   end
 
-  # def pet()
-  #   @pet
-  # end
-  #
-  # def pet?
-  #   if pet == "fox" || "bat"
-  #     true
-  #   else
-  #     false
-  #   end
-  # end
-  #
-  # def thirsty()
-  #   @thirsty
-  # end
-  #
-  # def thirsty?
-  #   @thirsty
-  # end
-  #
-  # def thirsty()
-  #   if thirsty?
-  #     true
-  #   else
-  #     false
-  #   end
-  # end
+  def drink
+    @counter += 1
+  end
 
 end
