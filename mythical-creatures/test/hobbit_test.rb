@@ -1,7 +1,7 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative 'hobbit'
+require_relative '../lib/hobbit'
 
 class HobbitTest < Minitest::Test
   def test_it_has_a_name
@@ -69,15 +69,15 @@ class HobbitTest < Minitest::Test
     sam = Hobbit.new('Sam')
     # check that .has_ring? for Frodo returns true
     assert frodo.has_ring?
-    refute sam.has_ring?
     # check that .has_ring? for Sam returns false
+    refute sam.has_ring?
   end
 
   def test_hobbits_are_short
     # create a hobbit
     hobbit = Hobbit.new('Albus')
     # check that .is_short? returns true
-    assert hobbit.is_short? 
+    assert hobbit.is_short?
   end
 
 end
